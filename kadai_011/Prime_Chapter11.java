@@ -1,23 +1,23 @@
-package kadai_011;
+  public static void main(String[] args) {
+    int max = 100;
+    boolean[] primeNum = new boolean[max + 1];
 
-public class Prime_Chapter11 {
+    for (int i = 2; i <= max; i++) {
+        primeNum[i] = true;
+    }
 
-	public static void main(String[] args) {
-		// 100までの整数が素数か判定するboolean型の配列を作成・代入
-		boolean[] primeJudge = new boolean[100];
-		
-
- 
-        for( int i = 2; i < 99; i++ ) {
-
-       
-            if( i % 2 <= 0 ) {
-     
-                continue;
+    for (int i = 2; i * i <= max; i++) {
+        if (primeNum[i]) {
+            for (int j = i * i; j <= max; j += i) {
+                primeNum[j] = false; 
             }
+        }
+    }
 
+    for (int i = 2; i <= max; i++) {
+        if (primeNum[i]) {
             System.out.println(i);
         }
-    
-}
-}
+    }
+  }  
+
