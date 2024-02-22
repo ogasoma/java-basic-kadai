@@ -10,7 +10,7 @@ public class Dictionary_Chapter20 {
 	dictionary.put("banana","バナナ");
 	dictionary.put("lemon","レモン");
 	dictionary.put("strabery","いちご");
-	dictionary.put("grepe","ぶどう");
+	dictionary.put("grape","ぶどう");
 	dictionary.put("muscat","マスカット");
 	dictionary.put("kiwi","キウイ");
 	dictionary.put("cherry","さくらんぼ");
@@ -21,7 +21,7 @@ public class Dictionary_Chapter20 {
     	if (fruit  == null) {
             System.out.println(word + "は辞書に存在しません");
         } else {
-            System.out.println(word + "の意味は" + fruit  + "です");
+            System.out.println(word + "の意味は" + fruit  );
         }
     }
 }
