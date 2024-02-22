@@ -1,12 +1,23 @@
 package kadai_017;
-public class KatoTaro_Chapter17 extends Kato_Chapter17 {
 
-	public void	setGivenName(String name) {
-		this.givenName = name ;
-		System.out.println("名前は"+familyName+name+"です");
-		}
-		
-	public void eachIntroduce() {		//個別の紹介を出力する
-		System.out.println("好きな食べ物はリンゴです");
-		}
+//子クラス　加藤太郎を表す
+public class KatoTaro_Chapter17 extends Kato_Chapter17{
+	
+	String taroIntroduce = "";
+	
+	public void setGivenName(String name) {
+		givenName = name;
+	}
+	
+	public void execIntroduce() {
+		System.out.println("名前は"+ familyName + givenName + "です");
+		System.out.println("住所は"+ address + "です");
+		eachIntroduce();
+		System.out.println(taroIntroduce);
+	}
+	
+	public void eachIntroduce() {
+		taroIntroduce = "Javaが得意です";
+	}
+	
 }
