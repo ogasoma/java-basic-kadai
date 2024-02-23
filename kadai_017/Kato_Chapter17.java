@@ -15,10 +15,15 @@ abstract public class Kato_Chapter17 {
 	}
 	
 	//個別の紹介を出力するメソッド
-	abstract public void eachIntroduce();
+	abstract public void eachIntroduce();{
+		
+	}
 	
 	//紹介を実行する
 	public void execIntroduce() {
+		System.out.println( "趣味は読書です");
+		System.out.println( "好きな食べ物はリンゴです");
+		System.out.println( "Javaが得意です");
 	}
 	
 }
