@@ -1,29 +1,35 @@
 package kadai_017;
 
-//抽象親クラス
 abstract public class Kato_Chapter17 {
-	//姓フィールド
-	public String familyName ="加藤";
-	//姓フィールド
-	public String givenName = "";
-	//住所フィールド
-	public String address = "東京都中野区〇×";
 	
-	//共通の紹介を出力するメソッド
+	// 名を表すメソッド
+	void setGivenName(String givenName) {
+		this.givenName = givenName;
+	}
+	
+	// 個別の紹介を出力する抽象メソッド	
+	abstract void eachIntroduce();
+	
+	// 共通の紹介を出力するメソッド
 	public void commonIntroduce() {
-		System.out.println(familyName);
+		System.out.println("名前は" + familyName + this.givenName + "です" );
+		System.out.println("住所は" + address +  "です" );
 	}
 	
-	//個別の紹介を出力するメソッド
-	abstract public void eachIntroduce();{
-		
-	}
-	
-	//紹介を実行する
+	// 紹介を実行するメソッド
 	public void execIntroduce() {
-		System.out.println( "趣味は読書です");
-		System.out.println( "好きな食べ物はリンゴです");
-		System.out.println( "Javaが得意です");
+		commonIntroduce	();
+		eachIntroduce();
 	}
+
+	// 姓を表すフィールド
+	public String familyName = "加藤";
+
+	// 名を表すフィールド
+	public String givenName;
+	
+	// 住所を表すフィールド
+	public String address =  "東京都中野区〇×";
+	
 	
 }
